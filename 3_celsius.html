@@ -8,9 +8,9 @@
 <body>
 
     <form action="">
-        Digite o valor da temperatura em Celsius: 
+        Digite o valor da temperatura em fahrenheit: 
         <br><br>
-        <input type="number" id="celsius">
+        <input type="number" id="fahrenheit">
         <br><br>
         <button type="button" onclick="converter()">Converter</button>
     </form>
@@ -19,10 +19,10 @@
 
     <script>
         function converter(){
-            let celsius = parseFloat(document.getElementById("celsius").value);
-            let fahrenheit = celsius * 9/5 + 32;
+            let fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+            let celsius = (fahrenheit - 32) * 5/9;
 
-            document.getElementById("resposta").innerHTML = "Essa temperatura em fahrenheit é " + fahrenheit.toFixed(2);
+            document.getElementById("resposta").innerHTML = "Essa temperatura em celsius é " + celsius.toFixed(2);
         }
     </script>
 
